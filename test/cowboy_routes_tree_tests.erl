@@ -5,12 +5,18 @@
 success_test () ->
   ?assertEqual(cowboy_routes_tree:rt([{"/v1",
                                        [{{<<"/users">>, users_handler, []},
-                                         [{"/:user_id", user_handler, []}]},
+                                         [
+                                          {"/:user_id", user_handler, []}
+                                         ]},
                                         {{"/tweets", tweets_handler, []},
-                                         [{"/my", my_tweets_handler, []},
-                                          {"/:user_id", user_tweets_handler, []}]},
+                                         [
+                                          {"/my", my_tweets_handler, []},
+                                          {"/:user_id", user_tweets_handler, []}
+                                         ]},
                                         {"/apps",
-                                         [{"/:app_id", app_handler, []}]}]},
+                                         [
+                                          {"/:app_id", app_handler, []}
+                                         ]}]},
                                       {"/metrics", metrics_handler, []}]),
                [{<<"/v1/users">>,users_handler,[]},
                 {<<"/v1/users/:user_id">>,user_handler,[]},
