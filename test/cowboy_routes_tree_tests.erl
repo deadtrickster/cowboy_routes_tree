@@ -8,7 +8,7 @@ success_test () ->
                                          [
                                           {"/:user_id", user_handler, []}
                                          ]},
-                                        {{"/tweets", tweets_handler, []},
+                                        {{"/tweets", tweets_handler},
                                          [
                                           {"/my", my_tweets_handler, []},
                                           {"/:user_id", user_tweets_handler, []}
@@ -26,7 +26,7 @@ success_test () ->
                 {<<"/v1/apps/:app_id">>,app_handler,[]},
                 {"/metrics",metrics_handler,[]}]).
 
-errpr_test () ->
+error_test () ->
   ?assertError(function_clause, cowboy_routes_tree:rt([{"/v1",
                                                         [{<<"/users">>,
                                                           [{"", users_handler},
