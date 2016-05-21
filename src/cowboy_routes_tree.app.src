@@ -11,5 +11,5 @@
 
   {maintainers, ["Ilya Khaprov"]},
   {licenses, ["MIT"]},
-  {links, [{"GitHub", "https://github.com/deadtrickster/cowboy_routes_tree"}]}
+  {links, []}
  ]}.

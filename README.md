@@ -6,7 +6,7 @@ Organize cowboy routes in trees
 Transforms
 ```erlang
 [{"/v1",
-  [{{<<"/users">>, users_handler, []},
+  [{{<<"/users">>, users_handler},
     [
      {"/:user_id", user_handler, []}
     ]},
