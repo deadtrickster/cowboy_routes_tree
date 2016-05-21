@@ -1,4 +1,4 @@
-cowboy_routes_tree
+cowboy_routes_tree [![Hex.pm](https://img.shields.io/hexpm/v/cowboy_routes_tree.svg?maxAge=2592000)](https://hex.pm/packages/cowboy_routes_tree)
 =====
 
 Organize cowboy routes in trees
